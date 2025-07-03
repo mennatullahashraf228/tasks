@@ -2,159 +2,310 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="header">
-        <h2>Our Team</h2>
-        <div class="header-links">
-            <a href="#">Home</a>
-            <a href="#">Our shop</a>
-            <a href="#">Product Details</a>
-            <a href="#">Contact Us</a>
+    <header>
+        <div class="en">
+            <div class="icon1">
+                <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <div>
+                <h2>Enterprise Dashboard</h2>
+            </div>
         </div>
-    </div>
+        <div class="pro">
+            <div class="icon2">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="id">
+                <h4>John Doe</h4>
+                <p>Administrator</p>
+            </div>
+            <div>
+                <button class="profile">JD</button>
+            </div>
+        </div>
+    </header>
 
-    <!--id-->
-    <div class="id">
-        <h1>Our Professional Team</h1>
-        <p>We are a team of skilled professionals in development and design, working together to provide the best
-            technical solutions for our clients</p>
+    <!--search-->
+    <div class="dashboard">
+        <div>
+            <h2>Dashboard Overview</h2>
+            <p>Welcome back! Here’s what’s happening with your business today.</p>
+        </div>
+        <div class="searchin">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" class="search-input" placeholder="Search.." />
+        </div>
     </div>
 
     <!--cards-->
-    <div class="section1">
-        <h1>Team Members</h1>
-        <section>
-            <div class="container">
-                <img src="images1/image-fen.jpg" alt="No Internet">
-                <div class="con">
-                    <h3>John Smith</h3>
-                    <h4>Lead Web Developer</h4>
-                    <p>Specialized in web application development using modern technologies like React and Node.js. Over
-                        5 years of experience in the field.</p>
-                    <div class="links">
-                        <a href="#">HTML</a>
-                        <a href="#">CSS</a>
-                        <a href="#">JavaScript</a>
-                        <a href="#">React</a>
+
+    <div class="cards">
+        <div class="onecard">
+            <div class="icon-dollar">
+                <i class="fa-solid fa-dollar-sign"></i>
+            </div>
+            <div class="words">
+                <h3>Total Revenue</h3>
+                <h1>$48,752</h1>
+                <div class="arrow">
+                    <div>
+                        <i class="fa-solid fa-arrow-up"></i>
                     </div>
-                    <div class="buttons">
-                        <button>View Profile</button>
-                        <button>Contact</button>
+                    <div>
+                        <p>12.5% from last month</p>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <img src="images1/cat.jpg" alt="No Internet">
-                <div class="con">
-                    <h3>Sarah Johnson</h3>
-                    <h4>UI/UX Designer</h4>
-                    <p>Specialized in user experience and interface design. Works on improving user experience and
-                        making applications more user-friendly.</p>
-                    <div class="links">
-                        <a href="#">Figma</a>
-                        <a href="#">UI Design</a>
-                        <a href="#">UX Research</a>
-                        <a href="#">Prototyping</a>
-                    </div>
-                    <div class="buttons">
-                        <button>View Profile</button>
-                        <button>Contact</button>
-                    </div>
-                </div>
-            </div>
-            <div class="container" id="newcardd">
-                <img id="newImg" src="images1/guitar.jpg" alt="No Internet">
-                <div class="con">
-                    <h3 id="newName">Michael Brown</h3>
-                    <h4 id="newJob">Mobile App Developer</h4>
-                    <p id="newDefi">pecialized in web application development using modern technologies like React and Node.js. Over
-                        5 years of experience in the field.</p>
-                    <div class="links">
-                        <a href="#">React Native</a>
-                        <a href="#">Flutter</a>
-                        <a href="#">Firebase</a>
-                        <a href="#">Mobile Ul</a>
-                    </div>
-                    <div class="buttons">
-                        <button>View Profile</button>
-                        <button>Contact</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!--stats-->
-    <div class="backg">
-        <h1>Our Team Stats</h1>
-        <div class="num">
-            <div>
-                <h2>15+</h2>
-                <p>Combined Years of Experience</p>
-            </div>
-            <div>
-                <h2>50+</h2>
-                <p>Completed Projects</p>
-            </div>
-            <div>
-                <h2>100%</h2>
-                <p>Client Satisfaction</p>
             </div>
         </div>
-        <div class="num1">
-            <h2>10+</h2>
-            <p>Mastered Technologies</p>
-        </div>
-    </div>
-    <!--buttom-->
-    <div class="buttom">
-        <p>© 2023 Our Team. All rights reserved.</p>
-        <p>Email: info@team.com | Phone: 0123456789</p>
-    </div>
 
-    <div class="addnc">
-        <input id="userImg" type="file" accept="image/*">
-        <button id="addc" onclick="newCard()">Add your new card</button>
-    </div>
-    
-    <script>
-        function newCard(){
-            var name=prompt("type your name:");
-            var nImg=document.getElementById(userImg);
-            var imgUrl = URL.createObjectURL(nImg.files[0]);
-            var x = document.getElementById("newcardd");
-            x.innerHTML=
-            `
-            <div class="container">
-                <img src=${imgUrl} alt="No Internet">
-                <div class="con">
-                    <h3>${name}</h3>
-                    <h4>Lead Web Developer</h4>
-                    <p>Specialized in web application development using modern technologies like React and Node.js. Over
-                        5 years of experience in the field.</p>
-                    <div class="links">
-                        <a href="#">HTML</a>
-                        <a href="#">CSS</a>
-                        <a href="#">JavaScript</a>
-                        <a href="#">React</a>
+        <div class="onecard">
+            <div class="icon-bag">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <div class="words">
+                <h3>New Orders</h3>
+                <h1>2,156</h1>
+                <div class="arrow">
+                    <div>
+                        <i class="fa-solid fa-arrow-up"></i>
                     </div>
-                    <div class="buttons">
-                        <button>View Profile</button>
-                        <button>Contact</button>
+                    <div>
+                        <p>8.3% from last month</p>
                     </div>
                 </div>
             </div>
-            `
-            ;
+        </div>
 
-        }
+        <div class="onecard">
+            <div class="icon-user-plus">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+            <div class="words">
+                <h3>New Customers</h3>
+                <h1>524</h1>
+                <div class="revarrow">
+                    <div>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </div>
+                    <div>
+                        <p>2.1% from last month</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    </script>
+        <div class="onecard">
+            <div class="icon-charbar">
+                <i class="fa-solid fa-chart-bar"></i>
+            </div>
+            <div class="words">
+                <h3>Avg. Order Value</h3>
+                <h1>$226</h1>
+                <div class="arrow">
+                    <div>
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </div>
+                    <div>
+                        <p>5.7% from last month</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--sections-->
+
+    <div class="sec1-2">
+        <div class="section1">
+            <div class="upper-section1">
+                <div>
+                    <h3>Sales Performance</h3>
+                </div>
+                <div>
+                    <select>
+                        <option>Last 90 Days</option>
+                        <option>Last 30 Days</option>
+                    </select>
+                </div>
+            </div>
+            <div class="chart-vi">
+                <h2>Chart Visualization</h2>
+            </div>
+        </div>
+
+
+        <div class="section2">
+            <div>
+                <div class="upper-section2">
+                    <div>
+                        <h3>Recent Orders</h3>
+                    </div>
+                    <div>
+                        <select>
+                            <option>This Week</option>
+                            <option>This Month</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD-7841</td>
+                            <td>Sarah Johnson</td>
+                            <td>$245.99</td>
+                            <td><span class="completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-7840</td>
+                            <td>Michael Chen</td>
+                            <td>$189.50</td>
+                            <td><span class="pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-7839</td>
+                            <td>David Wilson</td>
+                            <td>$320.00</td>
+                            <td><span class="completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-7838</td>
+                            <td>Emily Davis</td>
+                            <td>$156.75</td>
+                            <td><span class="canceled">Canceled</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-7837</td>
+                            <td>Robert Brown</td>
+                            <td>$275.30</td>
+                            <td><span class="completed">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="view-all">
+                <div>
+                    <a href="#">View All Orders</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="sec3-4">
+        
+
+
+        <div class="section3">
+            <div>
+                <div class="upper-section2">
+                    <div>
+                        <h3>Recent Orders</h3>
+                    </div>
+                    <div>
+                        <select>
+                            <option>This Week</option>
+                            <option>This Month</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD-7841</td>
+                            <td>Sarah Johnson</td>
+                            <td>$245.99</td>
+                            <td><span class="completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-7840</td>
+                            <td>Michael Chen</td>
+                            <td>$189.50</td>
+                            <td><span class="pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-7839</td>
+                            <td>David Wilson</td>
+                            <td>$320.00</td>
+                            <td><span class="completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-7838</td>
+                            <td>Emily Davis</td>
+                            <td>$156.75</td>
+                            <td><span class="canceled">Canceled</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-7837</td>
+                            <td>Robert Brown</td>
+                            <td>$275.30</td>
+                            <td><span class="completed">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="view-all">
+                <div>
+                    <a href="#">View All Orders</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="section4">
+            <div class="upper-section1">
+                <div>
+                    <h3>Sales Performance</h3>
+                </div>
+                <div>
+                    <select>
+                        <option>Last 90 Days</option>
+                        <option>Last 30 Days</option>
+                    </select>
+                </div>
+            </div>
+            <div class="chart-vi">
+                <h2>Chart Visualization</h2>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
